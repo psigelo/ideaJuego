@@ -1,14 +1,28 @@
 <html>
 	<head>
-		<title>Game!</title>
+		<title>Flwua!</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 	<body onload="mainApp()" >
-		<canvas width="800" height="600" id="game-surface">
-			Your browser does not support HTML5
-		</canvas>
+		<div id="DIV-game"  tabindex="1">
+			<canvas width="800" height="600" id="game-surface"  >
+				Your browser does not support HTML5
+			</canvas>
+		</div>
 		<br />
 		<i> Rules: Play </i>
 		<script type="text/javascript" src="app.js"></script>
+		<!-- Lo siguiente son las clases Javascript -->
+		<script type="text/javascript" src="GameEngine.js"></script>
+		<script type="text/javascript" src="GameObject.js"></script>
 		<script type="text/javascript" src="gl-matrix.js"></script>
+		<script type="text/javascript" src="graphicController.js"></script>
+		<script type="text/javascript" src="GameCallbacks.js"></script>
+		<script type="text/javascript" src="Camera.js"></script>
+		<script type="text/javascript" src="Champion.js"></script>
+		<script type="text/javascript" src="ChampionStats.js"></script>
+		<script type="text/javascript" src="ChampionView.js"></script>
+		<script type="text/javascript" src="Transform.js"></script>
+		
 	</body>
 </html>

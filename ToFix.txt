@@ -1,0 +1,1 @@
+Bug001: Revizar por que esta tan lento el codigo siendo que es simplemente un triangulo. Probablemente tiene que ver con toda la informacion que es pasada cada vez que se debe pintar al gpu. Quizas no todo es necesario.
