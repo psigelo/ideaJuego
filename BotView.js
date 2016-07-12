@@ -1,4 +1,4 @@
-class ChampionView
+class BotView
 {
 	constructor( glController, camera )
 	{
@@ -39,15 +39,17 @@ class ChampionView
 		// Create buffer
 		//
 		this.boxVertices = 
-		[ // X, Y, Z           R, G, B
-			-1, -1, 0,			1, 0, 0,
-			0, 1, 0, 			1, 0, 0,
-			1, -1, 0, 			1, 0, 0
+		[   // X, Y, Z           R, G, B
+			-1, -1, 0,			0, 0, 1,
+			1, 1, 0, 			0, 0, 1,
+			1, -1, 0, 			0, 0, 1,
+			-1, 1, 0, 			0, 0, 1
 		];
 
 		this.boxIndices =
 		[
-			0, 1, 2
+			0, 1, 2,
+			0, 1, 3
 		];
 
 		var gl = this.glController.glHandler;
@@ -83,14 +85,12 @@ class ChampionView
 			6 * Float32Array.BYTES_PER_ELEMENT, // Size of an individual vertex
 			3 * Float32Array.BYTES_PER_ELEMENT // Offset from the beginning of a single vertex to this attribute
 		);
-
 	}
 
 
 
 	draw( transform )
 	{
-
 		var gl = this.glController.glHandler;		
 
 		gl.enableVertexAttribArray(this.positionAttribLocation);
@@ -121,7 +121,6 @@ class ChampionView
 			3 * Float32Array.BYTES_PER_ELEMENT // Offset from the beginning of a single vertex to this attribute
 		);
 
-
 		gl.useProgram( this.program );
 
 
@@ -135,5 +134,4 @@ class ChampionView
 		gl.disableVertexAttribArray(this.colorAttribLocation);
 	}
 
-	
 }

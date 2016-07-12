@@ -1,0 +1,7 @@
+Bug001: Revizar por que esta tan lento el codigo siendo que es simplemente un triangulo. Probablemente tiene que ver con toda la informacion que es pasada cada vez que se debe pintar al gpu. Quizas no todo es necesario.
+
+Solucion: se impelemento clase GameStatistics que realiza la medicion de fps y del fixedUpdateRate y se obtienen valores deseables (fixedUpdateRate es tan rapido que con sensibilidad de 1 millis se obtiene infinito, se requiere una mejor forma de calcular el tiempo pero dado que 1 millis esta bien se dejara asi)
+
+Bug002: The keyDown event is triggered so many times althougth the key is only oine time pressed but hold down.
+
+Solucion: Se creo una variable que trakea el valor anterior de la arrow, ademas se enlazo el computo con el fixedUpdate.
